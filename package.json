@@ -1,0 +1,22 @@
+{
+  "name": "w-ui",
+  "version": "0.0.1",
+  "description": "微信小程序UI框架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Wesley1993/w-ui.git"
+  },
+  "keywords": [
+    "微信小程序"
+  ],
+  "author": "wesley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wesley1993/w-ui/issues"
+  },
+  "homepage": "https://github.com/Wesley1993/w-ui#readme"
+}
