@@ -9,6 +9,7 @@
   </view>
   <view class="usermotto">
     <w-button></w-button>
+    <w-icon></w-icon>
     <text class="user-motto">{{motto}}</text>
   </view>
 </view>
