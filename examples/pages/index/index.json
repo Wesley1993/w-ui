@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "w-button":"/dist/button/index"
+  }
 }

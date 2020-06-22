@@ -1,12 +1,13 @@
 const { buildImage, buildJs, buildJson, buildWxml, buildWxss, copyStatic, clean, copy } = require('./task')
 const { series, parallel, watch } = require('gulp')
 const path = require('path')
-const componentData = require('./until')
-const result = `{common/*,behaviors,utils,${componentData}}`
-const isCustom = result !== `{common/*,behaviors,utils}`
+const componentData = require('./util')
+const result = `{common/*,behaviors,utils,${componentData()}}`
+const isCustom = result !== `{common/*,behaviors,utils,}`
 
 const distPath = path.resolve(__dirname, '../dist')
 const examplePath = path.resolve(__dirname, '../examples/dist')
+
 const srcPrefix = path.resolve(__dirname, '../src')
 const srcDevPath = `${srcPrefix}/**`
 const srcProPath = isCustom ? `${srcPrefix}/${result}` : srcDevPath

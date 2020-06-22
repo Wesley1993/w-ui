@@ -8,6 +8,12 @@ const wxmlmin = require('gulp-htmlmin')
 const rename = require('gulp-rename')
 const del = require('del')
 
+/**
+ * 编译为wxss文件
+ * @param {源文件路径} srcPath 
+ * @param {暂存文件路径} remainPath 
+ * @param {结果文件路径} distPath 
+ */
 const buildWxss = (srcPath, remainPath, distPath) => () =>
 	src([ srcPath, remainPath ])
 		.pipe(less())
@@ -19,14 +25,14 @@ const buildWxss = (srcPath, remainPath, distPath) => () =>
 		)
 		.pipe(dest(distPath))
 
-const copy = (srcPath, distPath, ext) => () => src(`$(srcPath)/*.${ext}`).pipe(dest(distPath))
+const copy = (srcPath, distPath, ext) => () => src(`${srcPath}/*.${ext}`).pipe(dest(distPath))
 
 const buildWxml = (srcPath, remainPath, distPath) => () =>
 	src([ srcPath, remainPath ])
 		.pipe(wxmlmin({ removeComments: true, keepClosingSlash: true, caseSensitive: true }))
 		.pipe(dest(distPath))
 
-const buildJson = (srcPath, distPath) => () => src(srcPath).pipe(jsmin()).pipe(dest(distPath))
+const buildJson = (srcPath, distPath) => () => src(srcPath).pipe(jsonmin()).pipe(dest(distPath))
 
 const buildJs = (srcPath, distPath) => () => src(srcPath).pipe(jsmin()).pipe(dest(distPath))
 

@@ -8,6 +8,7 @@
     </block>
   </view>
   <view class="usermotto">
+    <w-button></w-button>
     <text class="user-motto">{{motto}}</text>
   </view>
 </view>
