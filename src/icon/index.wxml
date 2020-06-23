@@ -1,2 +1,1 @@
-<!-- button组件 -->
-<view>icon</view>
+<view class="w-class w-class-self w-self-class w-icon {{name===''?'':'w-icon-'+name}}" style="{{size?'font-size:'+size+'rpx;':''}}{{color?'color:'+color+';':''}}"></view>
