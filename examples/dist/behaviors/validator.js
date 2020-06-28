@@ -1,5 +1,5 @@
 export default Behavior({
-	definitionFilter (defField) {
+	definitionFilter (defFields) {
 		const { properties } = defFields
 		const propsKey = Object.keys(properties)
 		propsKey.forEach((name) => {

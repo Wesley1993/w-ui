@@ -2,7 +2,7 @@ import validator from '../behaviors/validator'
 
 Component({
 	externalClasses: [ 'w-class', 'w-label-class', 'w-hover-class', 'w-img-class', 'w-icon-class' ],
-	behaviors: [ validator ],
+	// behaviors: [ validator ],
 	/**
    * 组件的属性列表
    */
@@ -21,7 +21,7 @@ Component({
 		size: {
 			type: String,
 			value: 'medium',
-			options: [ 'mini', 'small', 'medium', 'large' ]
+			options: [ 'mini', 'medium', 'large', 'long' ]
 		},
 		shape: {
 			type: String,
@@ -42,7 +42,17 @@ Component({
 		image: String,
 		bgColor: String,
 		iconColor: String,
-		iconSize: String
+		iconSize: String,
+		special: String,
+		hoverStopPropagation: Boolean,
+		hoverStartTime: {
+			type: Number,
+			value: 20
+		},
+		hoverStayTime: {
+			type: Number,
+			value: 70
+		}
 	},
 
 	/**
@@ -58,7 +68,7 @@ Component({
 		handleTap () {
 			if (this.data.disabled || this.data.loading) return false
 			this.triggerEvent(
-				'wtap',
+				'wuitap',
 				{},
 				{
 					bubbles: true,
