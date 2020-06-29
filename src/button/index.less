@@ -61,6 +61,10 @@
 	&-default {
 		background-color: @default-color;
 	}
+	&-info {
+		background-color: @info-color;
+		color: #333333;
+	}
 
 	&-success {
 		background-color: @success-color;
@@ -75,4 +79,46 @@
 	}
 
 	// shape
+	&-square {
+		border-radius: 0;
+	}
+	&-semicircle {
+		border-radius: @btn-circle-size;
+	}
+	&-large&-semicirlce {
+		border-radius: @btn-circle-size-large;
+	}
+	&-mini&-semicircle {
+		border-radius: @btn-circle-size-mini;
+	}
+	&-circle {
+		border-radius: @btn-circle-size/5;
+	}
+
+	//plain
+	&-plain {
+		background-color: #fff;
+		color: @default-color;
+		border: 2rpx solid @default-color;
+	}
+	&-info&-plain {
+		background-color: @info-color;
+		color: #333333;
+		border: 2rpx solid @info-color;
+	}
+	&-success&-plain {
+		background-color: #fff;
+		color: @success-color;
+		border: 2rpx solid @success-color;
+	}
+	&-error&-plain {
+		background-color: #fff;
+		color: @error-color;
+		border: 2rpx solid @error-color;
+	}
+	&-warning&-plain {
+		background-color: #fff;
+		color: @warning-color;
+		border: 2rpx solid @warning-color;
+	}
 }

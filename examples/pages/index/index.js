@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
+const {routePath}=require('../../constants/appConstant')
 
 Page({
   data: {
@@ -13,6 +14,13 @@ Page({
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
+    })
+  },
+  // 跳转至组件页面
+  toComponent:function(event){
+    let {dataset}=event.currentTarget
+    wx.navigateTo({
+      url: routePath[dataset.type],
     })
   },
   onLoad: function () {

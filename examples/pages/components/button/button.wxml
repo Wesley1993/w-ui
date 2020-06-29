@@ -1,0 +1,13 @@
+<!--pages/components/button/button.wxml-->
+<view class="container">
+  <view class="component">
+    <view class="title">按钮类型</view>
+    <view class="component-box">
+      <w-button class="button-item">默认按钮</w-button>
+      <w-button type="success">成功按钮</w-button>
+      <w-button type="error">危险按钮</w-button>
+      <w-button type="warning">警告按钮</w-button>
+      <w-button type="info">普通按钮</w-button>
+    </view>
+  </view>
+</view>

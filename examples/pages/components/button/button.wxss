@@ -1,0 +1,13 @@
+/* pages/components/button/button.wxss */
+.container {
+  padding: 50rpx 20rpx;
+  box-sizing: border-box;
+}
+.component-box{
+  margin-top: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 160rpx;
+}

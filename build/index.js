@@ -37,5 +37,15 @@ module.exports = {
 		watch('../src/**/*.wxs', copy(srcDevPath, examplePath, 'wxs'))
 		watch('../src/**/*.json', copy(srcDevPath, examplePath, 'json'))
 		watch('../src/**/*.js', copy(srcDevPath, examplePath, 'js'))
+		watch(
+			'../config/styles/*.less',
+			series(
+				clean(`${examplePath}/**/*`),
+				parallel(
+					buildWxss(`${srcDevPath}/*.less`, `!${srcDevPath}/_*.less`, examplePath),
+					copyStatic(srcDevPath, examplePath, 'dev')
+				)
+			)
+		)
 	})
 }

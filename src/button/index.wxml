@@ -7,7 +7,7 @@
         </view>
     </block>
     <block wx:else>
-        <view class="w-btn {{'w-btn-'+size}} {{'w-btn-'+type}} {{'w-btn-'+shape}} {{plain?'w-btn-plain':''}} {{disabled?'w-btn-disabled':''}} w-class" hover-class="{{disabled?'':''btn-hover w-hover-class}}" hover-stop-propagation="{{hoverStopPropagation}}" hover-start-time="{{hoverStartTime}}" hover-stay-time="{{hoverStayTime}}" style="{{width?'min-wdith:'+width+'rpx;':''}}  {{height?'height:'+height+'rpx':''}} {{size=='long'?'border-radius:0;':''}}  {{'background-color:'+bgColor}}">
+        <view class="w-btn {{'w-btn-'+size}} {{'w-btn-'+type}} {{'w-btn-'+shape}} {{plain?'w-btn-plain':''}} {{disabled?'w-btn-disabled':''}} w-class" hover-class="{{disabled?'':'btn-hover w-hover-class'}}" hover-stop-propagation="{{hoverStopPropagation}}" hover-start-time="{{hoverStartTime}}" hover-stay-time="{{hoverStayTime}}" style="{{width?'min-wdith:'+width+'rpx;':''}}  {{height?'height:'+height+'rpx':''}} {{size=='long'?'border-radius:0;':''}}  {{'background-color:'+bgColor}}">
             <view wx:if="{{loading}}" class="w-btn-loading {{'margin-'+size}} {{plain?'w-btn-loading-'+type:''}}"></view>
             <w-icon w-class="w-icon-class" class="{{'margin-'+size}} " wx:if="{{icon}}" name="{{icon}}" color="{{iconColor}}" size="{{iconSize}}" />
             <slot></slot>

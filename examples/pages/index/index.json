@@ -2,5 +2,6 @@
   "usingComponents": {
     "w-button":"/dist/button/index",
     "w-icon":"/dist/icon/index"
-  }
+  },
+  "navigationBarTitleText": "W-UI"
 }

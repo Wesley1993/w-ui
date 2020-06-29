@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "w-button":"/dist/button/index"
+  },
+  "navigationBarTitleText": "Button按钮"
+}
