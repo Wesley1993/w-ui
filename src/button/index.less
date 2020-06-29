@@ -121,4 +121,32 @@
 		color: @warning-color;
 		border: 2rpx solid @warning-color;
 	}
+
+	// Loading
+	&-loading {
+		opacity: 0.6;
+		display: inline-block;
+		vertical-align: middle;
+		width: 24rpx;
+		height: 24rpx;
+		background: transparent;
+		border-radius: 50%;
+		border: 4rpx solid @btn-loading-color;
+		border-color: @btn-loading-color @btn-loading-color @btn-loading-color transparent;
+		animation: btn-spin 0.6s linear;
+		animation-iteration-count: infinite;
+		&-default {
+			border: 4rpx solid @default-color;
+			border-color: @default-color @default-color @default-color transparent;
+		}
+	}
+}
+
+@keyframes btn-spin {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
