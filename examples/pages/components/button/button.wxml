@@ -9,13 +9,25 @@
 			<w-button type="warning">警告按钮</w-button>
 			<w-button type="info">普通按钮</w-button>
 		</view>
-		<view class="title">按钮类型</view>
+		<view class="title">朴素按钮</view>
 		<view class="component-box">
-			<w-button class="button-item">默认按钮</w-button>
-			<w-button type="success">成功按钮</w-button>
-			<w-button type="error">危险按钮</w-button>
-			<w-button type="warning">警告按钮</w-button>
-			<w-button type="info">普通按钮</w-button>
+			<w-button class="button-item" plain>默认按钮</w-button>
+			<w-button type="success" plain>成功按钮</w-button>
+			<w-button type="error" plain>危险按钮</w-button>
+			<w-button type="warning" plain>警告按钮</w-button>
+			<w-button type="info" plain>普通按钮</w-button>
+		</view>
+		<view class="title">禁用状态</view>
+		<view class="component-box">
+			<w-button class="button-item"  disabled>默认按钮</w-button>
+			<w-button type="success"  disabled>成功按钮</w-button>
+      <w-button type="info" plain disabled>普通按钮</w-button>
+		</view>
+    	<view class="title">加载状态</view>
+		<view class="component-box">
+			<w-button class="button-item"  loading>默认按钮</w-button>
+			<w-button type="success"  loading>成功按钮</w-button>
+      <w-button type="info"  loading>普通按钮</w-button>
 		</view>
 	</view>
 </view>
